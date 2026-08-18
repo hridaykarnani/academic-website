@@ -399,6 +399,13 @@ img {
   transition: background 160ms ease, color 160ms ease;
 }
 
+.paper-links {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
 .paper-link:hover {
   background: var(--ink);
   color: #fff;
@@ -800,7 +807,7 @@ img {
     font-size: 23px;
   }
 
-  .paper-link {
+  .paper-links {
     grid-column: 2;
     justify-self: start;
   }
