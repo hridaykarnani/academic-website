@@ -216,35 +216,34 @@ img {
 }
 
 .profile-band {
-  align-items: start;
   background: var(--crimson);
   color: #fff;
   display: grid;
-  gap: 40px;
-  grid-template-columns: 150px 1fr 1.2fr;
+  gap: 26px;
   padding: 54px max(4vw, calc((100vw - 1320px) / 2));
 }
 
-.profile-band > p:first-child {
+.profile-band-item {
+  align-items: start;
+  display: grid;
+  gap: 40px;
+  grid-template-columns: 150px minmax(0, 780px);
+}
+
+.profile-band-label {
   font-size: 11px;
   font-weight: 700;
   margin: 6px 0 0;
   text-transform: uppercase;
 }
 
-.profile-band h2 {
+.profile-band-copy {
+  color: #fff;
   font-family: var(--sans);
   font-size: 15px;
   font-weight: 400;
   line-height: 1.7;
   margin: 2px 0 0;
-}
-
-.profile-band > p:last-child {
-  color: #f0dce1;
-  font-size: 14px;
-  line-height: 1.7;
-  margin: 4px 0 0;
 }
 
 .paired-carousel {
@@ -682,12 +681,11 @@ img {
     margin-right: 24px;
   }
 
-  .profile-band,
+  .profile-band-item,
   .page-title {
     grid-template-columns: 120px 1fr;
   }
 
-  .profile-band > p:last-child,
   .page-title > p:last-child {
     grid-column: 2;
   }
@@ -734,7 +732,7 @@ img {
     grid-column: auto;
   }
 
-  .profile-band,
+  .profile-band-item,
   .page-title,
   .section-shell,
   .research-page-list,
@@ -748,12 +746,16 @@ img {
     padding: 48px 20px;
   }
 
-  .profile-band > p:last-child,
+  .profile-band-item {
+    gap: 8px;
+    grid-template-columns: 1fr;
+  }
+
   .page-title > p:last-child {
     grid-column: auto;
   }
 
-  .profile-band h2 {
+  .profile-band-copy {
     font-size: 14px;
   }
 
