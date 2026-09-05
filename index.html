@@ -1,6 +1,12 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <script>
+    if (window.location.pathname.endsWith('/index.html')) {
+      const cleanPath = window.location.pathname.slice(0, -'index.html'.length);
+      window.location.replace(cleanPath + window.location.search + window.location.hash);
+    }
+  </script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WFVCLXYMD3"></script>
   <script>
@@ -13,6 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Hriday Karnani is a PhD student in Economics at Harvard University working in international economics and finance.">
   <title>Hriday Karnani</title>
+  <link rel="canonical" href="https://hridaykarnani.com/">
   <link rel="icon" href="assets/favicon.svg?v=2" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <script src="carousel.js" defer></script>
@@ -20,10 +27,10 @@
 <body>
   <main class="profile-site">
     <header class="site-header">
-      <a class="wordmark" href="index.html">HK<span>.</span></a>
+      <a class="wordmark" href="/">HK<span>.</span></a>
       <nav aria-label="Primary navigation">
-        <a aria-current="page" href="index.html">About</a>
-        <a href="research.html">Research</a>
+        <a aria-current="page" href="/">About</a>
+        <a href="/research/">Research</a>
         <a href="https://hridaykarnani.github.io/hridaykarnani/cv.pdf" target="_blank" rel="noreferrer">CV</a>
       </nav>
     </header>
@@ -38,7 +45,7 @@
           <p>Finance</p>
         </div>
         <div class="hero-actions">
-          <a class="text-button" href="research.html">View research</a>
+          <a class="text-button" href="/research/">View research</a>
           <a class="quiet-link" href="https://hridaykarnani.github.io/hridaykarnani/cv.pdf" target="_blank" rel="noreferrer">Curriculum vitae</a>
         </div>
       </div>
@@ -58,7 +65,7 @@
       <div class="section-heading">
         <p class="eyebrow">Selected work</p>
         <h2>Research</h2>
-        <a href="research.html">All research</a>
+        <a href="/research/">All research</a>
       </div>
       <div class="paper-list paper-list-compact">
         <article class="paper">
