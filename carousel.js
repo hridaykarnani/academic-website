@@ -1,6 +1,7 @@
 document.querySelectorAll("[data-carousel]").forEach((carousel) => {
   const slides = Array.from(carousel.querySelectorAll("[data-slide]"));
   const selectors = Array.from(carousel.querySelectorAll("[data-carousel-dot]"));
+  const caption = carousel.querySelector("[data-carousel-caption]");
   const pairCount = selectors.length;
   let current = 0;
   let timer;
@@ -15,6 +16,7 @@ document.querySelectorAll("[data-carousel]").forEach((carousel) => {
     selectors.forEach((selector, selectorIndex) => {
       selector.setAttribute("aria-pressed", String(selectorIndex === current));
     });
+    if (caption) caption.textContent = selectors[current].dataset.caption;
   }
 
   function stop() {
